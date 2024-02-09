@@ -1,0 +1,113 @@
+/* .treeImg{
+  cursor: pointer;
+  position: absolute;
+  z-index: 1;
+  animation:bouncing 4s infinite;
+}
+.treeImg::before {
+  content: attr(id);
+  position: absolute;
+  top: 40%;
+  left: calc(50% - 100px);
+  width: 200px;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: 'Protest Riot', sans-serif;
+  color: #8121d0;
+  text-align: center;
+  z-index: 10;
+  transition: 0.3s;
+  z-index: 0;
+}
+
+.treeImg:hover {
+  z-index: 0;
+}
+.treeImg:hover::before {
+  z-index: 1;
+}
+
+/* bouncing animation */
+/*@keyframes bouncing {
+  0% {transform:translateY(0px) ;}
+  25% {transform:translateY(-10px) ;}
+  50% {transform:translateY(0px) ;}
+  75% {transform:translateY(-10px) ;}
+  100% {transform:translateY(0px) ;}
+} */
+
+.logos {
+  padding: 40px 0;
+  margin-top: 20px;
+  white-space: nowrap;
+  position: relative;
+}
+
+.logos:before,
+.logos:after {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+
+.logos:before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), #331c52);
+}
+
+.logos:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), black);
+}
+
+.logo-slide {
+  display: inline-flex;
+  width: fit-content;
+  animation: 20s slide infinite linear;
+}
+.logos:hover .logo-slide{
+  animation-play-state: paused;
+}
+.logo-slide .treeImg{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 50px;
+  transition: 0.5s;
+  cursor: pointer;
+  width: 140px;
+  height: 140px;
+  background-color: #E1EDEB;
+  border-radius: 50%;
+  position: relative;
+}
+
+.logo-slide .treeImg::before {
+  content: attr(id);
+  position: absolute;
+  top: 100%;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: 'Protest Riot', sans-serif;
+  color: #E1EDEB;
+  text-align: center;
+  transition: 0.3s;
+  opacity: 0;
+}
+
+.logo-slide .treeImg:hover {
+  transform: translateY(-20px);
+}
+
+.logo-slide .treeImg:hover::before {
+  opacity: 1;
+}
+
+@keyframes slide {
+  from { transform: translateX(0%);}
+  to { transform: translateX(-100%);}
+}
